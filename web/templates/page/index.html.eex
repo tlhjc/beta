@@ -1,36 +1,40 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<div class="feed-container">
+  <div class="feed-hero-container">
+    <div class="feed-hero-content">
+      <div class="feed-title">SWEATBIBLE</div>
+      <div class="feed-date"><%= @date %></div>
+    </div>
   </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+  <div class="feed-navbar">
+    <img class="social-media-icon" src="/images/twitter.svg" />
+    <img class="social-media-icon" src="/images/instagram.svg" />
+    <img class="social-media-icon" src="/images/fb.svg" />
+  </div>
+  <div class="feed-content-container">
+    <div class="feed-featured-post-container">
+      <div class="feed-featured-post-long"></div>
+      <div class="feed-featured-post-short"></div>
+      <div class="feed-featured-post-short"></div>
+      <div class="feed-featured-post-long"></div>
+      <div class="feed-featured-post-mid"></div>
+      <div class="feed-featured-post-mid"></div>
+      <div class="feed-featured-post-mid"></div>
+      <div class="feed-featured-post-bottom"></div>
+    </div>
+    <div class="feed-post-container">
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+      <div class="feed-post">Test</div>
+    </div>
   </div>
 </div>

@@ -1,1 +1,117 @@
-/* This file is for your main application css. */
+/* FONTS */
+
+@font-face {
+  font-family: BIG_JOHN;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/BIG_JOHN.otf);
+}
+
+@font-face {
+  font-family: slim_joe;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/slim_joe.otf);
+}
+
+@font-face {
+  font-family: sinaloa;
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/sinaloa.otf);
+}
+
+/* FONTS */
+
+body {
+  margin-top: 0;
+}
+
+.feed-container {
+  text-align: center;
+}
+
+.feed-date {
+  font-family: slim_joe;
+}
+
+.feed-hero-container {
+  background: url("https://cloud.githubusercontent.com/assets/12450298/24201722/ce809548-0f08-11e7-8d16-a48000e6a1ac.png") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  color: #ffffff;
+  padding: 10rem;
+  font-family: sinaloa;
+}
+
+.feed-navbar {
+  height: 5rem;
+  border-bottom: 1px solid lightblue;
+  padding: 1rem;
+}
+
+.feed-post {
+  border: 1px solid;
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feed-content-container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.feed-featured-post-container {
+  padding: 0.3rem;
+  padding-bottom: 20rem;
+  padding-top: 0.4rem;
+  background: #3686BF; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #3686BF , #61A096); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #3686BF, #61A096); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #3686BF, #61A096); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #3686BF , #61A096); /* Standard syntax */
+}
+
+.feed-featured-post-long {
+  height: 25rem;
+  width: 60%;
+  display: inline-block;
+  margin: 0.5px;
+  background-color: #ffffff;
+}
+
+.feed-featured-post-mid {
+  height: 25rem;
+  width: 32.8%;
+  display: inline-block;
+  margin: 0.5px;
+  background-color: #ffffff;
+}
+
+.feed-featured-post-short {
+  height: 25rem;
+  width: 39%;
+  display: inline-block;
+  margin: 0.5px;
+  background-color: #ffffff;
+}
+
+.feed-title {
+  font-size: 10rem;
+}
+
+.social-media-icon {
+  width: 3rem;
+  float: right;
+  margin-left: 0.3rem;
+}
+
+.social-media-icon:hover {
+  fill: black;
+}
+
+@media (max-width: 1000px) {
+  .feed-content-container {
+    width: 100%;
+  }
+}
