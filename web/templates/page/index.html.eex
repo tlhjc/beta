@@ -1,36 +1,102 @@
-<div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
-</div>
-
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
+<div class="feed-container">
+  <div class="feed-hero-container">
+    <div class="feed-hero-content">
+      <div class="feed-title">SWEATBIBLE</div>
+      <div class="feed-date"><%= @date %></div>
+    </div>
   </div>
+  <div class="feed-navbar">
+    <img class="social-media-icon" src="/images/twitter.svg" />
+    <img class="social-media-icon" src="/images/instagram.svg" />
+    <img class="social-media-icon" src="/images/fb.svg" />
+  </div>
+  <div class="feed-content-container">
+    <div class="feed-featured-post-container">
+      <div class="feed-featured-post-long">
+          <div>
+            Test test test
+          </div>
+      </div>
+      <div class="feed-featured-post-short"></div>
+      <div class="feed-featured-post-short"></div>
+      <div class="feed-featured-post-long"></div>
+      <div class="feed-featured-post-mid"></div>
+      <div class="feed-featured-post-mid"></div>
+      <div class="feed-featured-post-mid"></div>
+      <div class="feed-featured-post-bottom">
+        <div class="feed-featured-post-bottom-link">sample text</div>
 
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+      </div>
+    </div>
+    <div class="feed-post-container">
+      <div class="feed-post">
+        <div class="feed-post-image-container">
+          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
+        </div>
+        <div class="feed-post-text">
+          <div class="feed-post-tag">Fitness</div>
+          <br />
+          <br />
+          <div class="feed-post-snippet">
+            This is the snippet of the article that is being displayed here. It's a placeholder right now.
+          </div>
+          <br />
+          <div class="feed-post-author">
+            By Some Guy, 2 hours ago
+          </div>
+        </div>
+      </div>
+      <div class="feed-post">
+        <div class="feed-post-image-container">
+          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
+        </div>
+        <div class="feed-post-text">
+          <div class="feed-post-tag">Health</div>
+          <br />
+          <br />
+          <div class="feed-post-snippet">
+            This is the snippet of the article that is being displayed here. It's a placeholder right now.
+          </div>
+          <br />
+          <div class="feed-post-author">
+            By Some Guy, 2 hours ago
+          </div>
+        </div>
+      </div>
+      <div class="feed-post">
+        <div class="feed-post-image-container">
+          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
+        </div>
+        <div class="feed-post-text">
+          <div class="feed-post-tag">Nutrition</div>
+          <br />
+          <br />
+          <div class="feed-post-snippet">
+            This is the snippet of the article that is being displayed here. It's a placeholder right now.
+          </div>
+          <br />
+          <div class="feed-post-author">
+            By Some Guy, Mar 22, 2017
+          </div>
+        </div>
+      </div>
+      <div class="feed-post">
+        <div class="feed-post-image-container">
+          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
+        </div>
+        <div class="feed-post-text">
+          <div class="feed-post-tag">Fitness</div>
+          <br />
+          <br />
+          <div class="feed-post-snippet">
+            This is the snippet of the article that is being displayed here. It's a placeholder right now.
+          </div>
+          <br />
+          <div class="feed-post-author">
+            By Some Guy, Mar 22, 2017
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
