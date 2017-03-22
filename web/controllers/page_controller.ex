@@ -2,12 +2,10 @@ defmodule Beta.PageController do
   use Beta.Web, :controller
 
   def index(conn, _params) do
-    IO.puts get_date()
-
-    render conn, "index.html", date: get_date()
+    render conn, "index.html", date: get_todays_date()
   end
 
-  def get_date() do
+  def get_todays_date() do
     {{year, month, day}, {hour, minute, second}} = :calendar.local_time()
     date = Date.utc_today()
     months = [

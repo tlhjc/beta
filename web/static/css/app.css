@@ -31,34 +31,13 @@ body {
   text-align: center;
 }
 
-.feed-date {
-  font-family: slim_joe;
-}
-
-.feed-hero-container {
-  background: url("https://cloud.githubusercontent.com/assets/12450298/24201722/ce809548-0f08-11e7-8d16-a48000e6a1ac.png") no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  color: #ffffff;
-  padding: 10rem;
-  font-family: sinaloa;
-}
-
-.feed-navbar {
-  height: 5rem;
-  border-bottom: 1px solid lightblue;
-  padding: 1rem;
-}
-
-.feed-post {
-  border: 1px solid;
-  padding: 3rem;
-  margin-bottom: 1rem;
-}
-
 .feed-content-container {
   width: 75%;
   margin: 0 auto;
+}
+
+.feed-date {
+  font-family: slim_joe;
 }
 
 .feed-featured-post-container {
@@ -72,6 +51,8 @@ body {
 }
 
 .feed-featured-post-bottom {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .feed-featured-post-bottom-link {
@@ -104,6 +85,53 @@ body {
   display: inline-block;
   margin: 0.5px;
   background-color: #ffffff;
+}
+
+.feed-hero-container {
+  background: url("https://cloud.githubusercontent.com/assets/12450298/24201722/ce809548-0f08-11e7-8d16-a48000e6a1ac.png") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  color: #ffffff;
+  padding: 10rem;
+  font-family: sinaloa;
+}
+
+.feed-navbar {
+  height: 5rem;
+  border-bottom: 1px solid lightblue;
+  padding: 1rem;
+}
+
+.feed-post {
+  padding: 3rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  font-family: slim_joe;
+}
+
+.feed-post img {
+  width: 32rem;
+}
+
+/*https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg*/
+
+.feed-post-container {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+}
+
+.feed-post-image-container {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+.feed-post-text {
+  display: inline-block;
+  width: 50%;
+  padding-top: 6rem;
 }
 
 .feed-title {
