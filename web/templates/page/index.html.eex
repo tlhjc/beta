@@ -19,7 +19,10 @@
       <div class="feed-featured-post-mid"></div>
       <div class="feed-featured-post-mid"></div>
       <div class="feed-featured-post-mid"></div>
-      <div class="feed-featured-post-bottom"></div>
+      <div class="feed-featured-post-bottom">
+        <div class="feed-featured-post-bottom-link">sample text</div>
+
+      </div>
     </div>
     <div class="feed-post-container">
       <div class="feed-post">Test</div>
