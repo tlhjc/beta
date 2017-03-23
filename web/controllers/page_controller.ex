@@ -1,12 +1,15 @@
 defmodule Beta.PageController do
   use Beta.Web, :controller
+  alias Beta.Post
 
   def index(conn, _params) do
-    render conn, "index.html", date: get_todays_date()
+    posts = Repo.all(Post)
+    IO.inspect posts
+    render conn, "index.html", date: get_todays_date(), posts: posts
   end
 
   def get_todays_date() do
-    {{year, month, day}, {hour, minute, second}} = :calendar.local_time()
+    {{year, month, day}, {_hour, _minute, _second}} = :calendar.local_time()
     date = Date.utc_today()
     months = [
       "January",
@@ -38,5 +41,6 @@ defmodule Beta.PageController do
 
     date = current_day_of_week <> ", " <> current_month <> " " <> current_month_date <> ", " <> current_year
     upper_case_date = String.upcase(date)
+    upper_case_date
   end
 end

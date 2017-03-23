@@ -1,1 +1,46 @@
+<div class="container">
+<%= if @conn.assigns.current_user do %>
+  <div class="logout-button-container">
+    <%= link "Log out", to: session_path(@conn, :delete, @conn.assigns.current_user), method: "delete", class: "logout-button" %>
+  </div>
+<% end %>
 <h1>Admin</h1>
+
+<h3>External Article Creator</h3>
+
+<%= form_for @post_changeset, post_path(@conn, :create), fn f -> %>
+  <div class="form-group">
+    <%= label f, :article_link, class: "control-label" %>
+    <%= text_input f, :article_link, placeholder: "https://www.health.com/article1", class: "form-control login-input" %>
+    <%= error_tag f, :article_link %>
+  </div>
+  <div class="form-group">
+    <%= label f, :image_url, class: "control-label" %>
+    <%= text_input f, :image_url, placeholder: "http://image.png", class: "form-control login-input" %>
+    <%= error_tag f, :image_url %>
+  </div>
+  <div class="form-group">
+    <%= label f, :snippet, class: "control-label" %>
+    <%= textarea f, :snippet, placeholder: "Enter the article title that the user will see", class: "form-control login-input" %>
+    <%= error_tag f, :snippet %>
+  </div>
+  <div class="form-group">
+    <%= label f, :tag, class: "control-label" %>
+    <%= text_input f, :tag, placeholder: "Fitness", class: "form-control login-input" %>
+    <%= error_tag f, :tag %>
+  </div>
+  <div class="form-group">
+    <%= label f, :author, class: "control-label" %>
+    <%= text_input f, :author, placeholder: "John Doe", class: "form-control login-input" %>
+    <%= error_tag f, :author %>
+  </div>
+  <div class="form-group">
+    <%= label f, :featured, class: "control-label" %>
+    <%= checkbox f, :featured, class: "post-featured" %>
+    <%= error_tag f, :featured %>
+  </div>
+  <%= hidden_input f, :external, value: "true" %>
+  <%= submit "Create Post", class: "login-button" %>
+<% end %>
+
+</div>

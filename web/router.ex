@@ -26,6 +26,7 @@ defmodule Beta.Router do
     resources "/", AdminController, only: [:index]
     resources "/register", UserController, only: [:new]
     resources "/session", SessionController, only: [:new, :create, :delete]
+    resources "/post", PostController, only: [:create]
   end
 
   # Other scopes may use custom stacks.
