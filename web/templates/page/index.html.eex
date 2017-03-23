@@ -13,7 +13,6 @@
   <div class="feed-content-container">
     <div class="feed-featured-post-container">
       <div class="feed-featured-post-long">
-
       </div>
       <div class="feed-featured-post-short"></div>
       <div class="feed-featured-post-short"></div>
@@ -23,10 +22,30 @@
       <div class="feed-featured-post-mid"></div>
       <div class="feed-featured-post-bottom">
         <div class="feed-featured-post-bottom-link">sample text</div>
-
       </div>
     </div>
     <div class="feed-post-container">
+      <%= for post <- @posts do %>
+      <a href="<%= post.article_link %>">
+        <div class="feed-post">
+          <div class="feed-post-image-container">
+            <img src="<%= post.image_url %>" />
+          </div>
+          <div class="feed-post-text">
+            <div class="feed-post-tag"><%= post.tag %></div>
+            <br />
+            <br />
+            <div class="feed-post-snippet">
+              <%= post.snippet %>
+            </div>
+            <br />
+            <div class="feed-post-author">
+              By <%= post.author %>, <%= format_date(post.inserted_at) %>
+            </div>
+          </div>
+        </div>
+      </a>
+      <% end %>
       <div class="feed-post">
         <div class="feed-post-image-container">
           <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />

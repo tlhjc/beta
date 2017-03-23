@@ -168,6 +168,31 @@ body {
   z-index: 10;
 }
 
+.logout-button {
+  border: 1px solid lightblue;
+  padding: 1rem;
+  border-radius: 500px;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.logout-button:hover {
+  border: 1px solid #3686BF;
+  background-color: #3686BF;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logout-button-container {
+  float: right;
+  margin-top: 2rem;
+}
+
+.post-featured {
+  margin-left: 2rem;
+}
+
 .social-media-icon {
   width: 3rem;
   float: right;
