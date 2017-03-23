@@ -7,6 +7,7 @@ defmodule Beta.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug Beta.Auth, repo: Beta.Repo
   end
 
   pipeline :api do
@@ -17,6 +18,14 @@ defmodule Beta.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+  end
+
+  scope "/admin", Beta do
+    pipe_through :browser # Use the default browser stack
+
+    resources "/", AdminController, only: [:index]
+    resources "/register", UserController, only: [:new]
+    resources "/session", SessionController, only: [:new, :create, :delete]
   end
 
   # Other scopes may use custom stacks.

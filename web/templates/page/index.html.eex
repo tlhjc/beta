@@ -13,9 +13,7 @@
   <div class="feed-content-container">
     <div class="feed-featured-post-container">
       <div class="feed-featured-post-long">
-          <div>
-            Test test test
-          </div>
+
       </div>
       <div class="feed-featured-post-short"></div>
       <div class="feed-featured-post-short"></div>

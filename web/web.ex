@@ -36,6 +36,7 @@ defmodule Beta.Web do
 
       import Beta.Router.Helpers
       import Beta.Gettext
+      import Beta.Auth, only: [authenticate_user: 2, authenticate_admin: 2]
     end
   end
 
