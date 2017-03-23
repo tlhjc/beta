@@ -26,94 +26,26 @@
     </div>
     <div class="feed-post-container">
       <%= for post <- @posts do %>
-      <a href="<%= post.article_link %>">
-        <div class="feed-post">
-          <div class="feed-post-image-container">
-            <img src="<%= post.image_url %>" />
-          </div>
-          <div class="feed-post-text">
-            <div class="feed-post-tag"><%= post.tag %></div>
-            <br />
-            <br />
-            <div class="feed-post-snippet">
-              <%= post.snippet %>
+        <a href="<%= post.article_link %>" target="_blank">
+          <div class="feed-post">
+            <div class="feed-post-image-container">
+              <img src="<%= post.image_url %>" />
             </div>
-            <br />
-            <div class="feed-post-author">
-              By <%= post.author %>, <%= format_date(post.inserted_at) %>
+            <div class="feed-post-text">
+              <div class="feed-post-tag"><%= post.tag %></div>
+              <br />
+              <br />
+              <div class="feed-post-snippet">
+                <%= post.snippet %>
+              </div>
+              <br />
+              <div class="feed-post-author">
+                By <%= post.author %>, <%= format_date(post.inserted_at) %>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
       <% end %>
-      <div class="feed-post">
-        <div class="feed-post-image-container">
-          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
-        </div>
-        <div class="feed-post-text">
-          <div class="feed-post-tag">Fitness</div>
-          <br />
-          <br />
-          <div class="feed-post-snippet">
-            This is the snippet of the article that is being displayed here. It's a placeholder right now.
-          </div>
-          <br />
-          <div class="feed-post-author">
-            By Some Guy, 2 hours ago
-          </div>
-        </div>
-      </div>
-      <div class="feed-post">
-        <div class="feed-post-image-container">
-          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
-        </div>
-        <div class="feed-post-text">
-          <div class="feed-post-tag">Health</div>
-          <br />
-          <br />
-          <div class="feed-post-snippet">
-            This is the snippet of the article that is being displayed here. It's a placeholder right now.
-          </div>
-          <br />
-          <div class="feed-post-author">
-            By Some Guy, 2 hours ago
-          </div>
-        </div>
-      </div>
-      <div class="feed-post">
-        <div class="feed-post-image-container">
-          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
-        </div>
-        <div class="feed-post-text">
-          <div class="feed-post-tag">Nutrition</div>
-          <br />
-          <br />
-          <div class="feed-post-snippet">
-            This is the snippet of the article that is being displayed here. It's a placeholder right now.
-          </div>
-          <br />
-          <div class="feed-post-author">
-            By Some Guy, Mar 22, 2017
-          </div>
-        </div>
-      </div>
-      <div class="feed-post">
-        <div class="feed-post-image-container">
-          <img src="https://cloud.githubusercontent.com/assets/12450298/24210535/5bc64296-0f21-11e7-9920-c9c77802afd2.jpg" />
-        </div>
-        <div class="feed-post-text">
-          <div class="feed-post-tag">Fitness</div>
-          <br />
-          <br />
-          <div class="feed-post-snippet">
-            This is the snippet of the article that is being displayed here. It's a placeholder right now.
-          </div>
-          <br />
-          <div class="feed-post-author">
-            By Some Guy, Mar 22, 2017
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
