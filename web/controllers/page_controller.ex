@@ -9,7 +9,7 @@ defmodule Beta.PageController do
 
   def get_todays_date() do
     {{year, month, day}, {_hour, _minute, _second}} = :calendar.local_time()
-    date = Date.utc_today()
+    date = NaiveDateTime.utc_now()
     months = [
       "January",
       "February",
