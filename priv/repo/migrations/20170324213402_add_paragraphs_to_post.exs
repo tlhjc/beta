@@ -3,10 +3,10 @@ defmodule Beta.Repo.Migrations.AddParagraphsToPost do
 
   def change do
     alter table(:posts) do
-      add :paragraph_1, :string
-      add :paragraph_2, :string
-      add :paragraph_3, :string
-      add :paragraph_4, :string
+      add :paragraph_1, :text
+      add :paragraph_2, :text
+      add :paragraph_3, :text
+      add :paragraph_4, :text
     end
   end
 end

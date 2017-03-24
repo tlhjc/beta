@@ -63,6 +63,11 @@ body {
   width: 75%;
 }
 
+.article-paragraph-container {
+  font-family: antonio_light;
+  font-size: 2rem;
+}
+
 .article-title {
   font-size: 4rem;
   font-family: antonio_regular;
