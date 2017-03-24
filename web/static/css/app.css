@@ -21,6 +21,26 @@
   src: url(/fonts/sinaloa.otf);
 }
 
+@font-face {
+  font-family: antonio_regular;
+  font-style: normal;
+  src: url(/fonts/Antonio-Regular.ttf);
+}
+
+@font-face {
+  font-family: antonio_bold;
+  font-style: normal;
+  src: url(/fonts/Antonio-Bold.ttf);
+}
+
+@font-face {
+  font-family: antonio_light;
+  font-style: normal;
+  src: url(/fonts/Antonio-Light.ttf);
+}
+
+
+
 /* FONTS */
 
 body {
@@ -32,7 +52,7 @@ body {
 }
 
 .feed-content-container {
-  width: 75%;
+  width: 1250px;
   margin: 0 auto;
 }
 
@@ -53,6 +73,7 @@ body {
 .feed-featured-post-bottom {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  position: relative;
 }
 
 .feed-featured-post-bottom-link {
@@ -61,30 +82,92 @@ body {
   color: #ffffff;
   font-size: 6rem;
   width: 61%;
+  position: relative;
 }
 
 .feed-featured-post-long {
-  height: 25rem;
-  width: 60%;
+  height: 32rem;
+  width: 68%;
   display: inline-block;
   margin: 0.5px;
   background-color: #ffffff;
+  position: relative;
 }
 
+.feed-featured-post-long-image {
+  height: 100%;
+  width: 50%;
+  float: left;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.feed-featured-post-long-text {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  padding: 2rem;
+  font-family: antonio_regular;
+}
+
+.feed-featured-post-long-text-author {
+  color: #3686BF;
+}
+
+.feed-featured-post-long-text-snippet {
+  font-size: 4rem;
+}
+
+.feed-featured-post-long-text-snippet-words:hover {
+  color: #3686BF;
+}
+
+
 .feed-featured-post-mid {
-  height: 25rem;
+  height: 37rem;
   width: 32.8%;
   display: inline-block;
   margin: 0.5px;
   background-color: #ffffff;
+  position: relative;
 }
 
 .feed-featured-post-short {
-  height: 25rem;
-  width: 39%;
+  height: 32rem;
+  width: 31%;
   display: inline-block;
   margin: 0.5px;
   background-color: #ffffff;
+  position: relative;
+}
+
+.feed-featured-post-short-image {
+  height: 50%;
+  width: 100%;
+  float: left;
+}
+
+.feed-featured-post-short-text {
+  width: 100%;
+  right: 0;
+  text-align: left;
+  padding: 2rem;
+  font-family: antonio_regular;
+  position: absolute;
+  top: 19rem;
+}
+
+.feed-featured-post-short-text-author {
+  color: #3686BF;
+}
+
+.feed-featured-post-short-text-snippet {
+  font-size: 3rem;
+}
+
+.feed-featured-post-short-text-snippet-words:hover {
+  color: #3686BF;
 }
 
 .feed-hero-container {
@@ -110,6 +193,7 @@ body {
   display: inline-block;
   font-family: slim_joe;
   border-bottom: 1px solid lightblue;
+  width: 100%;
 }
 
 .feed-post img {
@@ -203,7 +287,12 @@ body {
   fill: black;
 }
 
-@media (max-width: 1000px) {
+
+.tall {
+  height: 40rem;
+}
+
+@media (max-width: 1250px) {
   .feed-content-container {
     width: 100%;
   }

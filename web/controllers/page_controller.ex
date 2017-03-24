@@ -4,7 +4,14 @@ defmodule Beta.PageController do
 
   def index(conn, _params) do
     posts = Repo.all(Post)
-    render conn, "index.html", date: get_todays_date(), posts: posts
+    standard_posts = Enum.filter(posts, fn post -> !post.featured end)
+    query = Ecto.Query.from(e in Post,
+      where: e.featured == true,
+      order_by: [desc: e.inserted_at],
+      limit: 7)
+    featured_posts = Repo.all(query)
+
+    render conn, "index.html", date: get_todays_date(), standard_posts: standard_posts, featured_posts: featured_posts
   end
 
   def get_todays_date() do
