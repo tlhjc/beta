@@ -9,7 +9,7 @@ defmodule Beta.PageController do
 
   def get_todays_date() do
     {{year, month, day}, {_hour, _minute, _second}} = :calendar.local_time()
-    date = NaiveDateTime.utc_now()
+    # date = NaiveDateTime.utc_now()
     months = [
       "January",
       "February",
@@ -35,11 +35,11 @@ defmodule Beta.PageController do
     ]
 
     current_month_date = Integer.to_string(day)
-    current_day_of_week = Enum.at(days, Date.day_of_week(date) - 1)
+    # current_day_of_week = Enum.at(days, Date.day_of_week(date) - 1)
     current_month = Enum.at(months, month - 1)
     current_year = Integer.to_string(year)
 
-    date = current_day_of_week <> ", " <> current_month <> " " <> current_month_date <> ", " <> current_year
+    date = current_month <> " " <> current_month_date <> ", " <> current_year
     upper_case_date = String.upcase(date)
     upper_case_date
   end
