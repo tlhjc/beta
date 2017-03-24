@@ -12,7 +12,7 @@ config :beta,
 # Configures the endpoint
 config :beta, Beta.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "gvEndTLRfLODX5ab+3+h/icjmJXXo/sIMgFx6RRjjmFZVOfJMhARqxlBRKGr/zpM",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: Beta.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Beta.PubSub,
            adapter: Phoenix.PubSub.PG2]
