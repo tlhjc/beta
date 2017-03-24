@@ -4,13 +4,12 @@ defmodule Beta.PageController do
 
   def index(conn, _params) do
     posts = Repo.all(Post)
-    IO.inspect posts
     render conn, "index.html", date: get_todays_date(), posts: posts
   end
 
   def get_todays_date() do
     {{year, month, day}, {_hour, _minute, _second}} = :calendar.local_time()
-    date = Date.utc_today()
+    date = Date.utc_now()
     months = [
       "January",
       "February",
