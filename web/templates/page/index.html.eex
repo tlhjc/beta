@@ -46,7 +46,7 @@
         <%= if Enum.at(@featured_posts, 2) != nil do %>
           <div class="feed-featured-post-short-image" style="background: url(<%= Enum.at(@featured_posts, 2).image_url %>);background-size: cover;background-position: 50%;height:60%;">
           </div>
-          <div class="feed-featured-post-short-text" style="top:16.5rem;">
+          <div class="feed-featured-post-short-text" style="top:17.5rem;">
             <div class="feed-featured-post-short-text-snippet" style="line-height:2rem;">
               <span class="feed-featured-post-short-text-snippet-words" style="font-size:2rem;"><%= Enum.at(@featured_posts, 2).snippet %></span>
             </div>
@@ -57,7 +57,21 @@
           </div>
         <% end %>
       </div>
-      <div class="feed-featured-post-long"></div>
+      <div class="feed-featured-post-long">
+        <%= if Enum.at(@featured_posts, 3) != nil do %>
+          <div class="feed-featured-post-long-text" style="right:auto;">
+            <div class="feed-featured-post-long-text-snippet">
+              <span class="feed-featured-post-long-text-snippet-words"><%= Enum.at(@featured_posts, 3).snippet %></span>
+            </div>
+            <br />
+            <div>
+              By <span class="feed-featured-post-long-text-author"><%= Enum.at(@featured_posts, 3).author %></span>, <%= format_date(Enum.at(@featured_posts, 0).inserted_at) %>
+            </div>
+          </div>
+          <div class="feed-featured-post-long-image" style="background: url(<%= Enum.at(@featured_posts, 3).image_url %>);background-size: cover;background-position: 50%;float:right;">
+          </div>
+        <% end %>
+      </div>
       <div class="feed-featured-post-mid"></div>
       <div class="feed-featured-post-mid"></div>
       <div class="feed-featured-post-mid"></div>
