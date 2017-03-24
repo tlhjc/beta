@@ -12,9 +12,36 @@
   </div>
   <div class="feed-content-container">
     <div class="feed-featured-post-container">
-      <div class="feed-featured-post-long">
+      <div class="feed-featured-post-long tall">
+        <%= if Enum.at(@featured_posts, 0) != nil do %>
+          <div class="feed-featured-post-long-image" style="background: url(<%= Enum.at(@featured_posts, 0).image_url %>);background-size: cover;background-position: 50%;">
+          </div>
+          <div class="feed-featured-post-long-text">
+            <div class="feed-featured-post-long-text-snippet">
+              <span class="feed-featured-post-long-text-snippet-words"><%= Enum.at(@featured_posts, 0).snippet %></span>
+            </div>
+            <br />
+            <div>
+              By <span class="feed-featured-post-long-text-author"><%= Enum.at(@featured_posts, 0).author %></span>, <%= format_date(Enum.at(@featured_posts, 0).inserted_at) %>
+            </div>
+          </div>
+        <% end %>
       </div>
-      <div class="feed-featured-post-short"></div>
+      <div class="feed-featured-post-short tall">
+        <%= if Enum.at(@featured_posts, 0) != nil do %>
+          <div class="feed-featured-post-short-image" style="background: url(<%= Enum.at(@featured_posts, 0).image_url %>);background-size: cover;background-position: 50%;">
+          </div>
+          <div class="feed-featured-post-short-text">
+            <div class="feed-featured-post-short-text-snippet">
+              <span class="feed-featured-post-short-text-snippet-words"><%= Enum.at(@featured_posts, 0).snippet %></span>
+            </div>
+            <br />
+            <div>
+              By <span class="feed-featured-post-long-text-author"><%= Enum.at(@featured_posts, 0).author %></span>, <%= format_date(Enum.at(@featured_posts, 0).inserted_at) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
       <div class="feed-featured-post-short"></div>
       <div class="feed-featured-post-long"></div>
       <div class="feed-featured-post-mid"></div>
@@ -25,7 +52,7 @@
       </div>
     </div>
     <div class="feed-post-container">
-      <%= for post <- @posts do %>
+      <%= for post <- @standard_posts do %>
         <a href="<%= post.article_link %>" target="_blank">
           <div class="feed-post">
             <div class="feed-post-image-container">
