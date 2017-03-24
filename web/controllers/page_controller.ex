@@ -9,7 +9,7 @@ defmodule Beta.PageController do
 
   def get_todays_date() do
     {{year, month, day}, {_hour, _minute, _second}} = :calendar.local_time()
-    date = DateTime.utc_now()
+    date = Date.utc_today()
     months = [
       "January",
       "February",
@@ -33,6 +33,7 @@ defmodule Beta.PageController do
       "Saturday",
       "Sunday"
     ]
+
     current_month_date = Integer.to_string(day)
     current_day_of_week = Enum.at(days, Date.day_of_week(date) - 1)
     current_month = Enum.at(months, month - 1)
