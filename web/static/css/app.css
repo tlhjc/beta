@@ -47,6 +47,27 @@ body {
   margin-top: 0;
 }
 
+.article-author {
+  font-family: antonio_regular;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content-container {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.article-image {
+  width: 75%;
+}
+
+.article-title {
+  font-size: 4rem;
+  font-family: antonio_regular;
+}
+
 .feed-container {
   text-align: center;
 }
@@ -271,6 +292,31 @@ body {
 .logout-button-container {
   float: right;
   margin-top: 2rem;
+}
+
+.navigation {
+  background-color: #3686BF;
+  width: 100%;
+  height: 4rem;
+}
+
+.navigation-social-media {
+  width: 3rem;
+  float: right;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+
+.navigation-title {
+  color: #ffffff;
+  font-family: sinaloa;
+  font-size: 3.23rem;
+  margin-left: 1rem;
+  display: inline-block;
+}
+
+.navigation:hover a {
+  text-decoration: none;
 }
 
 .post-featured {

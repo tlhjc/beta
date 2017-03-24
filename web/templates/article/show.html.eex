@@ -1,0 +1,7 @@
+<div class="article-content-container">
+  <div class="article-title"><%= @post.snippet %></div>
+  <br />
+  <div class="article-author">By <span style="color:#3686BF"><%= @post.author %></span>, <%= format_date(@post.inserted_at) %></div>
+  <img class="article-image" src="<%= @post.image_url %>" />
+  <% IO.inspect @post %>
+</div>
