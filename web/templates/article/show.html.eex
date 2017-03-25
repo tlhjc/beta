@@ -1,0 +1,17 @@
+<div class="article-content-container">
+  <div class="article-title"><%= @post.snippet %></div>
+  <br />
+  <div class="article-author">By <span style="color:#3686BF"><%= @post.author %></span>, <%= format_date(@post.inserted_at) %></div>
+  <img class="article-image" src="<%= @post.image_url %>" />
+  <div class="article-paragraph-container">
+    <br />
+    <div><%= @post.paragraph_1 %></div>
+    <br />
+    <div><%= @post.paragraph_2 %></div>
+    <br />
+    <div><%= @post.paragraph_3 %></div>
+    <br />
+    <div>Find out more about <a href="<%= @post.article_link %>">this subject.</a></div>
+  </div>
+  <% IO.inspect @post %>
+</div>

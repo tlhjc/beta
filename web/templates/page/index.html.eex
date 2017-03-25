@@ -123,7 +123,7 @@
     </div>
     <div class="feed-post-container">
       <%= for post <- @standard_posts do %>
-        <a href="<%= post.article_link %>" target="_blank">
+        <a href="/article/<%= post.id %>" target="_blank">
           <div class="feed-post">
             <div class="feed-post-image-container">
               <img src="<%= post.image_url %>" />
