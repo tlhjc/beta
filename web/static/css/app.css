@@ -367,8 +367,9 @@ body {
   }
   .feed-featured-post-short-text {
     top: 19rem;
+    line-height: 2.5rem;
   }
   .feed-featured-post-short-image {
-    height: 55%;
+    height: 60%;
   }
 }

@@ -46,7 +46,7 @@
         <%= if Enum.at(@featured_posts, 2) != nil do %>
           <div class="feed-featured-post-short-image" style="background: url(<%= Enum.at(@featured_posts, 2).image_url %>);background-size: cover;background-position: 50%;height:60%;">
           </div>
-          <div class="feed-featured-post-short-text" style="top:17.5rem;">
+          <div class="feed-featured-post-short-text">
             <div class="feed-featured-post-short-text-snippet" style="line-height:2rem;">
               <span class="feed-featured-post-short-text-snippet-words" style="font-size:2rem;"><%= Enum.at(@featured_posts, 2).snippet %></span>
             </div>
