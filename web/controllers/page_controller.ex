@@ -4,7 +4,11 @@ defmodule Beta.PageController do
 
   def index(conn, _params) do
     posts = Repo.all(Post)
-    standard_posts = Enum.filter(posts, fn post -> !post.featured end)
+    standard_posts =
+      posts
+      |> Enum.filter(fn post -> !post.featured end)
+      |> Enum.sort((&(&1.inserted_at >= &2.inserted_at)))
+
     query = Ecto.Query.from(e in Post,
       where: e.featured == true,
       order_by: [desc: e.inserted_at],

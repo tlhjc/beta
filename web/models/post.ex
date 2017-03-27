@@ -22,7 +22,7 @@ defmodule Beta.Post do
     struct
     |> cast(params, [:article_link, :image_url, :tag, :snippet, :author, :external, :featured, :paragraph_1, :paragraph_2, :paragraph_3, :paragraph_4])
     |> validate_length(:snippet, max: 150)
-    |> validate_required([:article_link, :image_url, :tag, :snippet, :author, :external, :featured])
+    |> validate_required([:article_link, :image_url, :tag, :snippet, :author, :external, :featured, :paragraph_1, :paragraph_2])
     |> unique_constraint(:article_link)
   end
 end

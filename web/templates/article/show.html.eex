@@ -11,7 +11,7 @@
     <br />
     <div><%= @post.paragraph_3 %></div>
     <br />
-    <div>Find out more about <a href="<%= @post.article_link %>">this subject.</a></div>
+    <div>Find out more about <a href="<%= @post.article_link %>" target="_blank">this subject.</a></div>
   </div>
   <% IO.inspect @post %>
 </div>
