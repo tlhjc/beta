@@ -353,3 +353,22 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 950px) {
+  .feed-featured-post-long {
+    width: 100%;
+  }
+  .feed-featured-post-short {
+    width: 49.5%;
+    height: 35rem;
+  }
+  .feed-featured-post-short-text-snippet-words {
+    font-size: 2rem;
+  }
+  .feed-featured-post-short-text {
+    top: 19rem;
+  }
+  .feed-featured-post-short-image {
+    height: 55%;
+  }
+}
