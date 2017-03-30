@@ -26,9 +26,8 @@ config :logger, :console,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
 
-# config :arc,
-#  bucket: System.get_env("BUCKET_NAME"),
-#  virtual_host: true
+# AWS S3
+
 config :ex_aws,
  access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),
  secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
