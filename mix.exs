@@ -24,7 +24,7 @@ defmodule Beta.Mixfile do
   def application do
     [mod: {Beta, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin]]
+                    :phoenix_ecto, :postgrex, :comeonin, :arc_ecto]]
   end
 
   # Specifies which paths to compile per environment.
@@ -44,7 +44,12 @@ defmodule Beta.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:excoveralls, "~> 0.6.2"},
-     {:comeonin, "~> 2.0"}]
+     {:comeonin, "~> 2.0"},
+     {:arc, "~> 0.5.2"},
+     {:arc_ecto, "~> 0.4.4"},
+     {:ex_aws, "~> 0.4.10"},
+     {:poison, "~> 2.0"},
+     {:httpoison, "~> 0.11.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
