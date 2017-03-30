@@ -12,7 +12,7 @@ defmodule Beta.UserController do
       |> Auth.login(user)
       |> put_flash(:info, "#{user.name} created!")
       |> redirect(to: page_path(conn, :index))
-    {:error, changeset} ->
+    {:error, _changeset} ->
       conn
       |> put_flash(:error, "Error signing up!")
       |> redirect(to: page_path(conn, :index))

@@ -7,7 +7,7 @@ defmodule Beta.SessionController do
       nil ->
         changeset = User.changeset(%User{})
         render conn, "new.html", changeset: changeset
-      user ->
+      _user ->
         conn
         |> put_flash(:info, "You're already logged in")
         |> redirect(to: admin_path(conn, :index))

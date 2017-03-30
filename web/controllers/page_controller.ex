@@ -35,15 +35,15 @@ defmodule Beta.PageController do
       "November",
       "December"
     ]
-    days = [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ]
+    # days = [
+    #   "Monday",
+    #   "Tuesday",
+    #   "Wednesday",
+    #   "Thursday",
+    #   "Friday",
+    #   "Saturday",
+    #   "Sunday"
+    # ]
 
     current_month_date = Integer.to_string(day)
     # current_day_of_week = Enum.at(days, Date.day_of_week(date) - 1)
