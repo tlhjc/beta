@@ -9,12 +9,20 @@
     <br />
     <%= if @post.image_1 do %>
       <div><img class="article-image" src="<%= @post.image_1 %>" /></div>
+      <br />
     <% end %>
-    <br />
     <div><%= @post.paragraph_2 %></div>
     <br />
+    <%= if @post.image_2 do %>
+      <div><img class="article-image" src="<%= @post.image_2 %>" /></div>
+      <br />
+    <% end %>
     <div><%= @post.paragraph_3 %></div>
     <br />
+    <%= if @post.image_3 do %>
+      <div><img class="article-image" src="<%= @post.image_3 %>" /></div>
+      <br />
+    <% end %>
     <%= if @post.paragraph_4 do %>
       <div><%= @post.paragraph_4 %></div>
       <br />

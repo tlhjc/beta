@@ -20,6 +20,8 @@ defmodule Beta.Post do
     field :paragraph_9, :string
     field :paragraph_10, :string
     field :image_1, :string
+    field :image_2, :string
+    field :image_3, :string
 
 
     timestamps()
@@ -45,7 +47,9 @@ defmodule Beta.Post do
       :paragraph_8,
       :paragraph_9,
       :paragraph_10,
-      :image_1
+      :image_1,
+      :image_2,
+      :image_3
       ])
     |> validate_length(:snippet, max: 150)
     |> validate_required([
