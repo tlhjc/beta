@@ -13,6 +13,13 @@ defmodule Beta.Post do
     field :paragraph_2, :string
     field :paragraph_3, :string
     field :paragraph_4, :string
+    field :paragraph_5, :string
+    field :paragraph_6, :string
+    field :paragraph_7, :string
+    field :paragraph_8, :string
+    field :paragraph_9, :string
+    field :paragraph_10, :string
+    field :image_1, :string
 
 
     timestamps()
@@ -20,9 +27,38 @@ defmodule Beta.Post do
 
   def changeset(struct, params \\ :invalid) do
     struct
-    |> cast(params, [:article_link, :image_url, :tag, :snippet, :author, :external, :featured, :paragraph_1, :paragraph_2, :paragraph_3, :paragraph_4])
+    |> cast(params, [
+      :article_link,
+      :image_url,
+      :tag,
+      :snippet,
+      :author,
+      :external,
+      :featured,
+      :paragraph_1,
+      :paragraph_2,
+      :paragraph_3,
+      :paragraph_4,
+      :paragraph_5,
+      :paragraph_6,
+      :paragraph_7,
+      :paragraph_8,
+      :paragraph_9,
+      :paragraph_10,
+      :image_1
+      ])
     |> validate_length(:snippet, max: 150)
-    |> validate_required([:article_link, :image_url, :tag, :snippet, :author, :external, :featured, :paragraph_1, :paragraph_2])
+    |> validate_required([
+      :article_link,
+      :image_url,
+      :tag,
+      :snippet,
+      :author,
+      :external,
+      :featured,
+      :paragraph_1,
+      :paragraph_2
+      ])
     |> unique_constraint(:article_link)
   end
 end

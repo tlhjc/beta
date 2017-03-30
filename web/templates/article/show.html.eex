@@ -7,10 +7,42 @@
     <br />
     <div><%= @post.paragraph_1 %></div>
     <br />
+    <%= if @post.image_1 do %>
+      <div><img class="article-image" src="<%= @post.image_1 %>" /></div>
+    <% end %>
+    <br />
     <div><%= @post.paragraph_2 %></div>
     <br />
     <div><%= @post.paragraph_3 %></div>
     <br />
+    <%= if @post.paragraph_4 do %>
+      <div><%= @post.paragraph_4 %></div>
+      <br />
+    <% end %>
+    <%= if @post.paragraph_5 do %>
+      <div><%= @post.paragraph_5 %></div>
+      <br />
+    <% end %>
+    <%= if @post.paragraph_6 do %>
+      <div><%= @post.paragraph_6 %></div>
+      <br />
+    <% end %>
+    <%= if @post.paragraph_7 do %>
+      <div><%= @post.paragraph_7 %></div>
+      <br />
+    <% end %>
+    <%= if @post.paragraph_8 do %>
+      <div><%= @post.paragraph_8 %></div>
+      <br />
+    <% end %>
+    <%= if @post.paragraph_9 do %>
+      <div><%= @post.paragraph_9 %></div>
+      <br />
+    <% end %>
+    <%= if @post.paragraph_10 do %>
+      <div><%= @post.paragraph_10 %></div>
+      <br />
+    <% end %>
     <div>Find out more about <a href="<%= @post.article_link %>" target="_blank">this subject.</a></div>
   </div>
   <% IO.inspect @post %>

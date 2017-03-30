@@ -24,7 +24,7 @@ defmodule Beta.Mixfile do
   def application do
     [mod: {Beta, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :arc_ecto]]
+                    :phoenix_ecto, :postgrex, :comeonin, :ex_aws, :hackney, :poison]]
   end
 
   # Specifies which paths to compile per environment.
@@ -45,10 +45,12 @@ defmodule Beta.Mixfile do
      {:cowboy, "~> 1.0"},
      {:excoveralls, "~> 0.6.2"},
      {:comeonin, "~> 2.0"},
-     {:arc, "~> 0.5.2"},
-     {:arc_ecto, "~> 0.4.4"},
-     {:ex_aws, "~> 0.4.10"},
+    #  {:arc, "~> 0.5.2"},
+    #  {:arc_ecto, "~> 0.4.4"},
+     {:ex_aws, "~> 1.0"},
      {:poison, "~> 2.0"},
+     {:hackney, "~> 1.6"},
+     {:uuid, "~> 1.1" },
      {:httpoison, "~> 0.11.1"}]
   end
 
