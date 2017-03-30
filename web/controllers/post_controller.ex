@@ -46,7 +46,6 @@ defmodule Beta.PostController do
         |> put_flash(:info, "Post created!")
         |> redirect(to: admin_path(conn, :index))
       {:error, _changeset} ->
-        IO.inspect _changeset
         conn
         |> put_flash(:error, "Error creating post!
         Check all fields have been entered and that the snippet is less than 150 characters.
