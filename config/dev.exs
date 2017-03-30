@@ -41,3 +41,19 @@ config :beta, Beta.Repo,
   database: "beta_dev",
   hostname: "localhost",
   pool_size: 10
+
+# AWS
+
+# config :arc,
+#  bucket: System.get_env("BUCKET_NAME"),
+#  virtual_host: true
+# config :ex_aws,
+#  access_key_id: System.get_env("AWS_ACCESS_KEY_ID"),
+#  secret_access_key: System.get_env("AWS_SECRET_ACCESS_KEY"),
+#  region: "eu-west-1",
+#  host: "s3.eu-west-1.amazonaws.com",
+#  s3: [
+#  scheme: "https://",
+#  host: "s3.eu-west-1.amazonaws.com",
+#  region: "eu-west-1"
+#  ]

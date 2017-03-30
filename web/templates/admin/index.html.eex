@@ -8,7 +8,7 @@
 
 <h3>External Article Creator</h3>
 
-<%= form_for @post_changeset, post_path(@conn, :create), fn f -> %>
+<%= form_for @post_changeset, post_path(@conn, :create), [multipart: true], fn f -> %>
   <div class="form-group">
     <%= label f, :article_link, class: "control-label" %>
     <%= text_input f, :article_link, placeholder: "https://www.health.com/article1", class: "form-control login-input" %>
@@ -40,6 +40,11 @@
     <%= error_tag f, :paragraph_1 %>
   </div>
   <div class="form-group">
+    <%= label f, :image_1, class: "control-label" %>
+    <%= file_input f, :image_1, class: "form-control" %>
+    <%= error_tag f, :image_1 %>
+  </div>
+  <div class="form-group">
     <%= label f, :paragraph_2, class: "control-label" %>
     <%= textarea f, :paragraph_2, class: "form-control login-input paragraph" %>
     <%= error_tag f, :paragraph_2 %>
@@ -50,6 +55,41 @@
     <%= error_tag f, :paragraph_3 %>
   </div>
   <div class="form-group">
+    <%= label f, :paragraph_4, class: "control-label" %>
+    <%= textarea f, :paragraph_4, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_4 %>
+  </div>
+  <div class="form-group">
+    <%= label f, :paragraph_5, class: "control-label" %>
+    <%= textarea f, :paragraph_5, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_5 %>
+  </div>
+  <div class="form-group">
+    <%= label f, :paragraph_6, class: "control-label" %>
+    <%= textarea f, :paragraph_6, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_6 %>
+  </div>
+  <div class="form-group">
+    <%= label f, :paragraph_7, class: "control-label" %>
+    <%= textarea f, :paragraph_7, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_7 %>
+  </div>
+  <div class="form-group">
+    <%= label f, :paragraph_8, class: "control-label" %>
+    <%= textarea f, :paragraph_8, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_8 %>
+  </div>
+  <div class="form-group">
+    <%= label f, :paragraph_9, class: "control-label" %>
+    <%= textarea f, :paragraph_9, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_9 %>
+  </div>
+  <div class="form-group">
+    <%= label f, :paragraph_10, class: "control-label" %>
+    <%= textarea f, :paragraph_10, class: "form-control login-input paragraph" %>
+    <%= error_tag f, :paragraph_10 %>
+  </div>
+  <div class="form-group">
     <%= label f, :featured, class: "control-label" %>
     <%= checkbox f, :featured, class: "post-featured" %>
     <%= error_tag f, :featured %>
@@ -57,5 +97,7 @@
   <%= hidden_input f, :external, value: "true" %>
   <%= submit "Create Post", class: "login-button" %>
 <% end %>
+
+<!-- <img src="https://sweatbible.s3.amazonaws.com/sweatbible/test" /> -->
 
 </div>
