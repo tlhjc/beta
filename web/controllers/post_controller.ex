@@ -2,16 +2,16 @@ defmodule Beta.PostController do
   use Beta.Web, :controller
   alias Beta.Post
 
-  def upload(post_params, images) when images == [] do
+  def configure_params(post_params, images) when images == [] do
     post_params
   end
 
-  def upload(post_params, images) do
+  def configure_params(post_params, images) do
     image = List.first(images)
     case post_params[image] do
       nil    ->
         reduced_images = List.delete(images, image)
-        upload_multiple(post_params, reduced_images)
+        configure_params(post_params, reduced_images)
       _image ->
         %{^image => image_params} = post_params
 
@@ -30,14 +30,14 @@ defmodule Beta.PostController do
           |> Map.update(image, image_params, fn _value -> "https://#{bucket_name}.s3.amazonaws.com/#{bucket_name}/#{filename}" end)
 
         reduced_images = List.delete(images, image)
-        upload_multiple(updated_params, reduced_images)
+        configure_params(updated_params, reduced_images)
     end
   end
 
   def create(conn, %{"post" => post_params}) do
     images = ["image_1", "image_2", "image_3"]
 
-    params = upload(post_params, images)
+    params = configure_params(post_params, images)
 
     changeset = Post.changeset(%Post{}, params)
     case Repo.insert(changeset) do
