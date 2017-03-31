@@ -2,11 +2,11 @@ defmodule Beta.PostController do
   use Beta.Web, :controller
   alias Beta.Post
 
-  def upload_multiple(post_params, images) when images == [] do
+  def upload(post_params, images) when images == [] do
     post_params
   end
 
-  def upload_multiple(post_params, images) do
+  def upload(post_params, images) do
     image = List.first(images)
     case post_params[image] do
       nil    ->
@@ -37,7 +37,7 @@ defmodule Beta.PostController do
   def create(conn, %{"post" => post_params}) do
     images = ["image_1", "image_2", "image_3"]
 
-    params = upload_multiple(post_params, images)
+    params = upload(post_params, images)
 
     changeset = Post.changeset(%Post{}, params)
     case Repo.insert(changeset) do
