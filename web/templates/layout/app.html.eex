@@ -25,7 +25,23 @@
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-
+      <div class="feed-footer">
+        <a href="/">
+          <div class="feed-footer-title">
+            SWEATBIBLE
+          </div>
+        </a>
+        <img class="social-media-icon-footer" src="/images/twitter.svg" />
+        <img class="social-media-icon-footer" src="/images/instagram.svg" />
+        <img class="social-media-icon-footer" src="/images/fb.svg" />
+        <div class="feed-footer-information-container">
+          <div class="feed-footer-information">Contact us</div>
+          <div class="feed-footer-separator"></div>
+          <div class="feed-footer-information">Terms of use</div>
+          <div class="feed-footer-separator"></div>
+          <div class="feed-footer-information">Privacy policy</div>
+        </div>
+      </div>
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>

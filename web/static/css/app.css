@@ -226,6 +226,42 @@ body {
   color: #3686BF;
 }
 
+.feed-footer {
+  height: 17rem;
+  background-color: #ffffff;
+  border-top: 1px solid lightblue;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.feed-footer:hover a {
+  text-decoration: none;
+}
+
+.feed-footer-information {
+  font-family: antonio-regular;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.feed-footer-separator {
+  display: inline-block;
+  height: 1rem;
+  width: 1px;
+  background-color: black;
+}
+
+.feed-footer-information-container {
+  margin-top: 1rem;
+}
+
+.feed-footer-title {
+  font-size: 3rem;
+  color: #3686BF;
+  font-family: sinaloa;
+}
+
 .feed-hero-container {
   background: url("https://cloud.githubusercontent.com/assets/12450298/24201722/ce809548-0f08-11e7-8d16-a48000e6a1ac.png") no-repeat;
   background-size: cover;
@@ -393,6 +429,11 @@ body {
   width: 3rem;
   float: right;
   margin-left: 0.3rem;
+}
+
+.social-media-icon-footer {
+  width: 3rem;
+  margin-left: 0.5rem;
 }
 
 .social-media-icon:hover {
