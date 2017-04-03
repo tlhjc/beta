@@ -7,6 +7,14 @@
 <h1>Admin</h1>
 
 <h3>External Article Creator</h3>
+<div class="article-criteria">
+  <h4>Article Criteria</h4>
+  <ul>
+    <li>Article link must not have been used before</li>
+    <li>Title cannot be more than 150 characters long</li>
+    <li>You must enter text into at least two paragraphs - Paragraph 1 and Paragraph 2</li>
+  </ul>
+</div>
 
 <%= form_for @post_changeset, post_path(@conn, :create), [multipart: true], fn f -> %>
   <div class="form-group">

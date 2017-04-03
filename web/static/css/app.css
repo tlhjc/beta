@@ -59,6 +59,12 @@ body {
   padding-top: 4rem;
 }
 
+.article-criteria {
+  background-color: palegoldenrod;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
 .article-image {
   width: 75%;
 }
