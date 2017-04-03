@@ -51,7 +51,8 @@
       <div><%= @post.paragraph_10 %></div>
       <br />
     <% end %>
-    <div>Find out more about <a href="<%= @post.article_link %>" target="_blank">this subject.</a></div>
+    <%= if @post.article_link do %>
+      <div>Find out more about <a href="<%= @post.article_link %>" target="_blank">this subject.</a></div>
+    <% end %>
   </div>
-  <% IO.inspect @post %>
 </div>

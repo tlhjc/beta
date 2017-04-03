@@ -53,7 +53,6 @@ defmodule Beta.Post do
       ])
     |> validate_length(:snippet, max: 150)
     |> validate_required([
-      :article_link,
       :image_url,
       :tag,
       :snippet,

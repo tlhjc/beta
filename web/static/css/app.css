@@ -266,6 +266,11 @@ body {
   font-size: 10rem;
 }
 
+.highlight {
+  color: orangered;
+  font-size: 2rem;
+}
+
 .login-button {
   width: 100%;
   height: 48px;

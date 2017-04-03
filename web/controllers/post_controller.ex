@@ -48,7 +48,7 @@ defmodule Beta.PostController do
       {:error, _changeset} ->
         conn
         |> put_flash(:error, "Error creating post!
-        Check all fields have been entered and that the snippet is less than 150 characters.
+        Check all fields have been entered and that the title is less than 150 characters.
         Also make sure that you have filled in at least two paragraphs and that the article link hasn't been entered previously")
         |> redirect(to: admin_path(conn, :index))
     end

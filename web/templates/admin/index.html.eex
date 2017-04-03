@@ -6,13 +6,15 @@
 <% end %>
 <h1>Admin</h1>
 
-<h3>External Article Creator</h3>
+<h3>Article Creator</h3>
 <div class="article-criteria">
   <h4>Article Criteria</h4>
   <ul>
     <li>Article link must not have been used before</li>
     <li>Title cannot be more than 150 characters long</li>
     <li>You must enter text into at least two paragraphs - Paragraph 1 and Paragraph 2</li>
+    <li>If the article is from another site, click the <span class="highlight">external</span> checkbox</li>
+    <li>If you want the article to be featured at the top of the site click the <span class="highlight">featured</span> checkbox</li>
   </ul>
 </div>
 
@@ -112,7 +114,11 @@
     <%= checkbox f, :featured, class: "post-featured" %>
     <%= error_tag f, :featured %>
   </div>
-  <%= hidden_input f, :external, value: "true" %>
+  <div class="form-group">
+    <%= label f, :external, class: "control-label" %>
+    <%= checkbox f, :external, class: "post-featured" %>
+    <%= error_tag f, :external %>
+  </div>
   <%= submit "Create Post", class: "login-button" %>
 <% end %>
 
