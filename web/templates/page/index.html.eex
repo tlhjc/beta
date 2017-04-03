@@ -1,7 +1,9 @@
 <div class="feed-container">
   <div class="feed-hero-container">
     <div class="feed-hero-content">
-      <div class="feed-title">SWEATBIBLE</div>
+      <a href="/" style="color:#ffffff;text-decoration:none;">
+        <div class="feed-title">SWEATBIBLE</div>
+      </a>
       <div class="feed-date"><%= @date %></div>
     </div>
   </div>
