@@ -108,13 +108,29 @@ body {
   position: relative;
 }
 
+.feed-featured-post-bottom-author {
+  margin-left: 50%;
+  margin-top: -4rem;
+  font-family: antonio-regular;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.feed-featured-post-bottom-author-name {
+  color: #34495e;
+}
+
 .feed-featured-post-bottom-link {
   font-family: sinaloa;
   padding: 4rem;
   color: #ffffff;
-  font-size: 6rem;
-  width: 61%;
+  font-size: 4rem;
+  width: 85%;
   position: relative;
+}
+
+.feed-featured-post-bottom-snippet:hover {
+  color: #34495e;
 }
 
 .feed-featured-post-long {

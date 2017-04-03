@@ -117,9 +117,12 @@
           </div>
         <% end %>
       </div>
-      <div class="feed-featured-post-bottom">
-        <div class="feed-featured-post-bottom-link">sample text</div>
-      </div>
+      <%= if Enum.at(@featured_posts, 7) != nil do %>
+        <div class="feed-featured-post-bottom">
+          <div class="feed-featured-post-bottom-link"><span class="feed-featured-post-bottom-snippet"><%= Enum.at(@featured_posts, 7).snippet %></span></div>
+          <div class="feed-featured-post-bottom-author">By <span class="feed-featured-post-bottom-author-name"><%= Enum.at(@featured_posts, 7).author %></span>, <%= format_date(Enum.at(@featured_posts, 7).inserted_at) %></div>
+        </div>
+      <% end %>
     </div>
     <div class="feed-post-container">
       <%= for post <- @standard_posts do %>

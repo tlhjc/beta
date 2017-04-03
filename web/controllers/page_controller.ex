@@ -12,8 +12,10 @@ defmodule Beta.PageController do
     query = Ecto.Query.from(e in Post,
       where: e.featured == true,
       order_by: [desc: e.inserted_at],
-      limit: 7)
+      limit: 8)
     featured_posts = Repo.all(query)
+
+    IO.inspect length(featured_posts)
 
     render conn, "index.html", date: get_todays_date(), standard_posts: standard_posts, featured_posts: featured_posts
   end
