@@ -1,9 +1,12 @@
 <div class="feed-container">
   <div class="feed-hero-container">
     <div class="feed-hero-content">
-      <a href="/" style="color:#ffffff;text-decoration:none;">
-        <div class="feed-title">SWEATBIBLE</div>
-      </a>
+        <div class="feed-title">
+          <img class="feed-logo" src="/images/logo-only-sweatbible.svg" />
+          <a href="/" style="color:#ffffff;text-decoration:none;">
+            <span>SWEATBIBLE</span>
+          </a>
+        </div>
       <div class="feed-date"><%= @date %></div>
     </div>
   </div>

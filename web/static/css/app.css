@@ -271,6 +271,11 @@ body {
   font-family: sinaloa;
 }
 
+.feed-logo {
+  width: 13rem;
+  margin-top: 0.5rem;
+}
+
 .feed-navbar {
   height: 5rem;
   border-bottom: 1px solid lightblue;
