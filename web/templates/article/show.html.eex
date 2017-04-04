@@ -1,4 +1,7 @@
 <div class="article-content-container">
+  <a href="/">
+    <img src="/images/left-arrow.svg" class="article-back-arrow" />
+  </a>
   <div class="article-title"><%= @post.snippet %></div>
   <br />
   <div class="article-author">By <span style="color:#3686BF"><%= @post.author %></span>, <%= format_date(@post.inserted_at) %></div>

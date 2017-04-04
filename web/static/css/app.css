@@ -54,6 +54,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.article-back-arrow {
+  width: 5rem;
+  margin-top: -3rem;
+  margin-bottom: 0.5rem;
+}
+
 .article-content-container {
   width: 1000px;
   margin: 0 auto;
